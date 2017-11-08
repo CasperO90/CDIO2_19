@@ -1,12 +1,13 @@
 package Spil;
 import Spil.Konto;
+import desktop_resources.GUI;
 
 
 public class Spiller {
-	String navn;
-	int score;
+	private String navn;
+	private int startSum;
 	
-	public Konto k = new Konto("spillerKonto");
+	private Konto k = new Konto("spillerKonto");
 	
 	public Spiller (String nytNavn) {
 		navn=nytNavn;
@@ -24,7 +25,24 @@ public class Spiller {
 		return navn+" - "+k.toString();
 	}
 	
+	public String getNavn() {
+		return navn;
+	}
+	
+	public void setNavn(String nytNavn) {
+		navn=nytNavn;
+	}
+	
+	public void tur(Raflebæger b) {
+		GUI.showMessage("123");
+	}
 	
 	
+	public int getStartSum() { // disse bruges når der slås om at starte
+		return startSum;
+	}
+	public void setStartSum(int n) {
+		startSum=n;
+	}
 	
 }
