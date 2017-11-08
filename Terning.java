@@ -3,10 +3,10 @@ package Spil;
 import java.util.Random;
 	public class Terning {
 		
-		String terning;
+		int[] terning;
 		
-		public Terning (String terningnavn){
-		terning=terningnavn;
+		public Terning (int[] a){
+		terning=a;
 		}
 		
 		Random dice = new Random(); //Opretter tilfældighedsvariabel
@@ -14,19 +14,14 @@ import java.util.Random;
 		
 		
 		public int slag() {
-			terningslag = 1+dice.nextInt(6);
+			terningslag = dice.nextInt(terning.length);
 			
-			return terningslag;
+			return terning[terningslag];
 		}
 		
 		public int getVærdi() {
 			return terningslag;
 		}
-		
-		
-		
-		
-		
 		
 	}
 	
