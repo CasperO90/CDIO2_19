@@ -9,7 +9,7 @@ public class Tekst {
 	// Tekst for når man lander på et felt.
 	String felt2 = "Du fandt prinsessen i tårnet! Kongen belønner dig med 250.";
 	String felt3 = "Du falder i krateret og brækker benet. Lægeregningen: 100.";
-	String felt4 = "Du fandt prinsessen i tårnet! Kongen belønner dig med 250.";
+	String felt4 = "Du går igennem porten og finder 100.";
 	String felt5 = "Du er i den kolde ørken. Du køber en billig sovepose til 20 for at overleve.";
 	String felt6 = "Du handler på Walled Citys marked og tjener 180.";
 	String felt7 = "Du ringer med klosterets klokker men får ikke noget ud af det.";
@@ -27,6 +27,7 @@ public class Tekst {
 	String iSlogEns = "I slog det samme, prøv igen.";
 	String indtastNavn1 = "Indtast navn på spiller 1";
 	String indtastNavn2 = "Indtast navn på spiller 2";
+	String duVandt = "- Tillykke du vandt!";
 	
 	public String landetPå(int i) {
 		String h=null;
