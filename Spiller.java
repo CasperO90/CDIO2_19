@@ -33,10 +33,6 @@ public class Spiller {
 		navn=nytNavn;
 	}
 	
-	public void tur(Raflebæger b) {
-		GUI.showMessage("123");
-	}
-	
 	
 	public int getStartSum() { // disse bruges når der slås om at starte
 		return startSum;
