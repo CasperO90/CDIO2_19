@@ -49,11 +49,15 @@ public class TerningSpil {
 		int i;
 		for (i=0;i==0;) {
 		tur(s1);
-		if (s1.getScore()>=3000 || s2.getScore()>=3000)
-			i=1;
+		if (s1.getScore()>=3000 || s2.getScore()>=3000) {
+		GUI.showMessage(s1.getNavn() + t.duVandt);
+		break;
+		}
 		tur(s2);
-		if (s1.getScore()>=3000 || s2.getScore()>=3000)
-			i=1;
+		if (s1.getScore()>=3000 || s2.getScore()>=3000) {
+			GUI.showMessage(s2.getNavn() + t.duVandt);
+			break;
+		}
 		} 
 		}
 		
@@ -62,11 +66,15 @@ public class TerningSpil {
 			int i;
 			for (i=0;i==0;) {
 			tur(s2);
-			if (s1.getScore()>=3000 || s2.getScore()>=3000)
-				i=1;
+			if (s1.getScore()>=3000 || s2.getScore()>=3000) {
+				GUI.showMessage(s1.getNavn() + t.duVandt);
+			break;
+			}
 			tur(s1);
-			if (s1.getScore()>=3000 || s2.getScore()>=3000)
-				i=1;
+			if (s1.getScore()>=3000 || s2.getScore()>=3000){
+				GUI.showMessage(s2.getNavn() + t.duVandt);
+				break;
+			}
 			} 
 			}
 		
@@ -95,7 +103,7 @@ public class TerningSpil {
 		case 11: GUI.showMessage(t.landetPå(11)); s.setScore(s.getScore()-50); GUI.setBalance(s.getNavn(), s.getScore()); break;
 		case 12: GUI.showMessage(t.landetPå(12)); s.setScore(s.getScore()+650); GUI.setBalance(s.getNavn(), s.getScore()); break;
 		}
-		GUI.removeCar(r.getSamletVærdi(), s.getNavn());
+		GUI.removeCar(r.getSamletVærdi()+1, s.getNavn());
 		GUI.setCar(1, s.getNavn());
 		if (r.getSamletVærdi()==10){
 			tur=true;
@@ -116,3 +124,5 @@ public class TerningSpil {
 		s.setStartSum(r.getSamletVærdi());
 	}
 }
+
+
